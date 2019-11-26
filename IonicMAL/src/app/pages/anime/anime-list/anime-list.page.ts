@@ -9,17 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class AnimeListPage implements OnInit {
 
-  anime: Observable<any>;
+  animes: Observable<any>;
 
-  constructor(private animeService: AnimeService) { }
+  constructor(private animeService: AnimeService) {
+   }
 
   ngOnInit() {
     this.animeService.getAnimes().subscribe(
       data => {
-        this.anime = data;
+        this.animes = data;
       }
     );
-    
   }
 
 
