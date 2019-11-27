@@ -8,13 +8,29 @@ import { Observable } from 'rxjs';
 })
 export class AnimeService {
 
-  apiUrl: string = "https://api.jikan.moe/v3";
+  generos: string[] = [];
+  generosAux: string[] = [];
 
-  maxAnimeId: number = 14648;
+  constructor(private httpClient: HttpClient) { 
+    this.getAnimes().subscribe(
+      data => {
+        data.forEach(f => {
+          f.genres.forEach(e => {
+            this.generosAux.push(e);
+          });
+        });
+        this.generosAux.forEach(g => {
+          if(!this.generos.includes(g)) {
+            this.generos.push(g);
+          }
+        });
+      }
+    );
+   }
 
-  //Numero de mangas: 32719
-
-  constructor(private httpClient: HttpClient) {  }
+   getGeneres(): string[] {
+    return this.generos;
+   }
 
   getAnimes(): Observable<any> {
     return this.httpClient.get('assets/data.json');
