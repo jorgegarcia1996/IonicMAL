@@ -11,28 +11,14 @@ import { Anime } from '../model/anime';
 export class HomePage {
 
   animes: Anime[];
-  genero: string;
   generos: string[];
+  searchGenre: string;
 
-  constructor( private router: Router,
-               private service: AnimeService) {
-    this.getData();
-    this.genero = "todos";
-  }
-
-  genreFilter() {
-    this.getData();
-    if (this.genero != "todos") {
-      this.service.getAnimes().subscribe(
-        data => {
-          data = data.filter(f => {
-            f.genres.includes(this.genero);
-            console.log(this.genero);
-          });
-          this.animes = data;
-        }
-      );
-    }
+  constructor(private router: Router,
+    private service: AnimeService) {
+      this.generos = this.service.getGeneres();
+      this.getData();
+      this.searchGenre = "todos";
   }
 
   getData() {
@@ -41,6 +27,5 @@ export class HomePage {
         this.animes = data;
       }
     );
-    this.generos = this.service.getGeneres();
   }
 }

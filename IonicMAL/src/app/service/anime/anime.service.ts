@@ -34,6 +34,5 @@ export class AnimeService {
 
   getAnimes(): Observable<any> {
     return this.httpClient.get('assets/data.json');
-
   }
 }

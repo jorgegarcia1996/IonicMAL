@@ -9,16 +9,21 @@
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="floating">Genero</ion-label>
-    <ion-select (ionChange)="genreFilter()" [(ngModel)]="genero">
+    <ion-select [(ngModel)]="searchGenre">
       <ion-select-option value="todos" selected>Todos</ion-select-option>
-      <ion-select-option *ngFor="let g of generos" [value]="g">{{ g }}</ion-select-option>
+      <ion-select-option *ngFor="let g of generos" [value]="g"
+        >{{ g }}</ion-select-option
+      >
     </ion-select>
   </ion-item>
 
-  <ion-list *ngFor="let anime of animes">
-    <div class="ion-text-center">
-      <img [src]="anime.img"/>
+  <div *ngFor="let anime of animes">
+    <div
+      *ngIf="anime.genres.includes(searchGenre) || searchGenre == 'todos'"
+      class="ion-text-center"
+    >
+      <img [src]="anime.img" />
       <p class="ion-padding">{{anime.title}}</p>
     </div>
-  </ion-list>
+  </div>
 </ion-content>
