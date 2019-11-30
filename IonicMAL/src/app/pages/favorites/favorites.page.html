@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 *ngIf="favorites.length < 1" class="ion-text-center"> No hay favoritos</h1>
+  <div *ngFor="let anime of favorites">
+    <div class="ion-margin-top">
+      <div (click)="showDetails(anime.id)" class="ion-text-center">
+        <img [src]="anime.img" />
+        <h2>{{anime.title}}</h2>
+      </div>
+      <div class="ion-margin" *ngIf="clicked && favorites[index].id == anime.id">
+        <h4>Generos</h4>
+        <ul>
+          <li *ngFor="let genre of anime.genres">{{ genre }}</li>
+        </ul>
+        <h4>Sinopsis</h4>
+        <p>{{ anime.description }}</p>
+        <h4>Estudio</h4>
+        <p>{{ anime.studio }}</p>
+        <ion-button target="_blank" [href]="anime.link">Ver en MAL</ion-button>
+        <ion-button (click)="deleteFromFavorites(anime)">Quitar de favoritos</ion-button>
+      </div>
+      <ion-item-divider></ion-item-divider>
+    </div>
+  </div>
+
+</ion-content>

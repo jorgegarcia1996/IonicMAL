@@ -7,23 +7,41 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <h2>Filtro por genero</h2>
   <ion-item>
     <ion-label position="floating">Genero</ion-label>
     <ion-select [(ngModel)]="searchGenre">
       <ion-select-option value="todos" selected>Todos</ion-select-option>
-      <ion-select-option *ngFor="let g of generos" [value]="g"
-        >{{ g }}</ion-select-option
-      >
+      <ion-select-option *ngFor="let g of generos" [value]="g">{{ g }}</ion-select-option>
     </ion-select>
   </ion-item>
-
+  <h1 class="ion-text-center">Lista de animes</h1>
+  <br>
   <div *ngFor="let anime of animes">
-    <div
-      *ngIf="anime.genres.includes(searchGenre) || searchGenre == 'todos'"
-      class="ion-text-center"
-    >
-      <img [src]="anime.img" />
-      <p class="ion-padding">{{anime.title}}</p>
+    <div *ngIf="anime.genres.includes(searchGenre) || searchGenre == 'todos'"
+      class="ion-margin-top">
+      <div (click)="showDetails(anime.id)" class="ion-text-center">
+        <img [src]="anime.img" />
+        <h2>{{anime.title}}</h2>
+      </div>
+      <div class="ion-margin" *ngIf="clicked && animes[index].id == anime.id">
+        <h4>Generos</h4>
+        <ul>
+          <li *ngFor="let genre of anime.genres">{{ genre }}</li>
+        </ul>
+        <h4>Sinopsis</h4>
+        <p>{{ anime.description }}</p>
+        <h4>Estudio</h4>
+        <p>{{ anime.studio }}</p>
+        <ion-button target="_blank" [href]="anime.link">Ver en MAL</ion-button>
+        <ion-button (click)="addToFavorites(anime)">Añadir a favoritos</ion-button>
+      </div>
+      <ion-item-divider></ion-item-divider>
     </div>
   </div>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <ion-button class="ion-margin" expand="full" href="favorites"><ion-icon name="flag"></ion-icon>Favoritos</ion-button>
+    </ion-toolbar>
+  </ion-footer>
