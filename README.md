@@ -10,12 +10,18 @@ Al clicar en uno de los elementos de la lista se muestran los detalles.
 
 Debajo de los detalles, hay 2 botones, el primero te lleva a la página de My Anime List correspondiente al anime, el segundo guarda el anime en tu lista de Favoritos. Para ver la lista de favoritos hay que pulsar el botón de la parte inferior de la pantalla.
 
-![Favoritos](./images/Filtro.gif)
+![Favoritos](./images/Favoritos.gif)
+
+Tanto desde la página principal como desde la lista de favoritos se puede eliminar un favorito de la lista de favoritos.
 
 En la parte superior de la página hay un filtro que filtra la lista por géneros, mostrando solo los resultados que contengan ese género.
 
+<<<<<<< HEAD
 ![Filtro](Filtro.gif)
 
 # Video explicativo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ui57IxJW7ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+=======
+![Filtro](./images/Filtro.gif)
+>>>>>>> bdb25ace33a7832b537dce2a06e79853b7f297f9
