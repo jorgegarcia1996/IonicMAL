@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AnimeService } from 'src/app/service/anime/anime.service';
 import { Anime } from 'src/app/model/anime';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-favorites',
@@ -15,7 +16,8 @@ export class FavoritesPage implements OnInit {
   index: number;
 
   constructor(private service: AnimeService, 
-    private router: Router) { }
+    private router: Router,
+    private alert: AlertController) { }
 
    ngOnInit() {
     this.service.getFavorites().then(
@@ -35,5 +37,25 @@ export class FavoritesPage implements OnInit {
       )
     );
     this.clicked = !this.clicked;
+  }
+
+  async alertDeleteFavorite(anime: Anime) {
+    const alert = await this.alert.create({
+      header: `¿Eliminar ${anime.title} de los favoritos?`,
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary'
+        }, {
+          text: 'Quitar',
+          cssClass: 'danger',
+          handler: () => {
+            this.deleteFromFavorites(anime);
+          }
+        }
+      ]
+    });
+    await alert.present();
   }
 }

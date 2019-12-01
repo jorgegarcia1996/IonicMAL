@@ -74,4 +74,28 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Toolbar **/
+  --ion-color-toolbar: #ff8040;
+  --ion-color-toolbar-rgb: 255,128,64;
+  --ion-color-toolbar-contrast: #000000;
+  --ion-color-toolbar-contrast-rgb: 0,0,0;
+  --ion-color-toolbar-shade: #e07138;
+  --ion-color-toolbar-tint: #ff8d53;
+
+  /**Main Content**/
+  --ion-color-content: #804000;
+  --ion-color-content-rgb: 128,64,0;
+  --ion-color-content-contrast: #ffffff;
+  --ion-color-content-contrast-rgb: 255,255,255;
+  --ion-color-content-shade: #713800;
+  --ion-color-content-tint: #8d531a;
+
+  /**Buttons**/
+  --ion-color-button: #bf0000;
+  --ion-color-button-rgb: 191,0,0;
+  --ion-color-button-contrast: #ffffff;
+  --ion-color-button-contrast-rgb: 255,255,255;
+  --ion-color-button-shade: #a80000;
+  --ion-color-button-tint: #c51a1a;
 }

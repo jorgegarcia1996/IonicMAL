@@ -6,4 +6,5 @@ export class Anime {
     link: string;
     title: string;
     img: string;
+    isFav?: boolean;
 }

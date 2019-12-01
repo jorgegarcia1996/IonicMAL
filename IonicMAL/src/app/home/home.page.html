@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="toolbar">
     <ion-title>
       IonicMAL
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <h2>Filtro por genero</h2>
-  <ion-item>
+<ion-content color="content">
+  <h2 class="ion-text-center">Filtro por genero</h2>
+  <ion-item class="border" color="content">
     <ion-label position="floating">Genero</ion-label>
     <ion-select [(ngModel)]="searchGenre">
       <ion-select-option value="todos" selected>Todos</ion-select-option>
@@ -30,18 +30,25 @@
           <li *ngFor="let genre of anime.genres">{{ genre }}</li>
         </ul>
         <h4>Sinopsis</h4>
-        <p>{{ anime.description }}</p>
+        <p class="ion-text-justify">{{ anime.description }}</p>
         <h4>Estudio</h4>
         <p>{{ anime.studio }}</p>
-        <ion-button target="_blank" [href]="anime.link">Ver en MAL</ion-button>
-        <ion-button (click)="addToFavorites(anime)">Añadir a favoritos</ion-button>
+        <ion-button color="button" target="_blank" [href]="anime.link">Ver en MAL</ion-button>
+        <ion-button *ngIf="!anime.isFav" color="button" (click)="addToFavorites(anime)">
+          <ion-icon name="star-outline">
+          </ion-icon>
+        </ion-button>
+        <ion-button *ngIf="anime.isFav" (click)="alertDeleteFavorite(anime)" color="button">
+            <ion-icon name="star">
+            </ion-icon>
+          </ion-button>
       </div>
-      <ion-item-divider></ion-item-divider>
+      <ion-item-divider color="content"></ion-item-divider>
     </div>
   </div>
 </ion-content>
 <ion-footer>
-    <ion-toolbar>
-      <ion-button class="ion-margin" expand="full" href="favorites"><ion-icon name="flag"></ion-icon>Favoritos</ion-button>
+    <ion-toolbar color="toolbar">
+      <ion-button color="button" class="ion-margin" expand="full" href="favorites"><ion-icon name="flag"></ion-icon> Ver favoritos</ion-button>
     </ion-toolbar>
   </ion-footer>

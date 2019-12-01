@@ -24,3 +24,31 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/** Clases de colores personalizados **/
+.ion-color-toolbar {
+    --ion-color-base: var(--ion-color-toolbar);
+    --ion-color-base-rgb: var(--ion-color-toolbar-rgb);
+    --ion-color-contrast: var(--ion-color-toolbar-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-toolbar-contrast-rgb);
+    --ion-color-shade: var(--ion-color-toolbar-shade);
+    --ion-color-tint: var(--ion-color-toolbar-tint);
+  }
+
+  .ion-color-content {
+    --ion-color-base: var(--ion-color-content);
+    --ion-color-base-rgb: var(--ion-color-content-rgb);
+    --ion-color-contrast: var(--ion-color-content-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-content-contrast-rgb);
+    --ion-color-shade: var(--ion-color-content-shade);
+    --ion-color-tint: var(--ion-color-content-tint);
+  }
+
+  .ion-color-button {
+    --ion-color-base: var(--ion-color-button);
+    --ion-color-base-rgb: var(--ion-color-button-rgb);
+    --ion-color-contrast: var(--ion-color-button-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-button-contrast-rgb);
+    --ion-color-shade: var(--ion-color-button-shade);
+    --ion-color-tint: var(--ion-color-button-tint);
+  }

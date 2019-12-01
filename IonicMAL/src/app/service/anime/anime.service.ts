@@ -22,6 +22,7 @@ export class AnimeService {
           f.genres.forEach(e => {
             this.generosAux.push(e);
           });
+          f.isFav = false;
         });
         this.generosAux.forEach(g => {
           if (!this.generos.includes(g)) {
@@ -48,11 +49,13 @@ export class AnimeService {
   }
 
   addToFavorites(anime: Anime): Promise<boolean> {
+    anime.isFav = true;
     this.favorites.push(anime);
     return this.storage.set('favorites', this.favorites);
   }
 
   deleteFromFavorites(anime: Anime): Promise<boolean> {
+    anime.isFav = false;
     this.favorites = this.favorites.filter(f => f.id != anime.id);
     return this.storage.set('favorites', this.favorites);
   }
