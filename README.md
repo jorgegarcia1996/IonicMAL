@@ -20,4 +20,4 @@ En la parte superior de la página hay un filtro que filtra la lista por género
 
 # Video explicativo
 
-![Video Explicativo](https://www.youtube.com/embed/ui57IxJW7ZM "Video explicativo")
+[![Video Explicativo](http://img.youtube.com/vi/ui57IxJW7ZM/0.jpg)](http://www.youtube.com/watch?v=ui57IxJW7ZM "Video Explicativo")
