@@ -12,6 +12,8 @@ Debajo de los detalles, hay 2 botones, el primero te lleva a la página de My An
 
 ![Favoritos](./images/Favoritos.gif)
 
+Tanto desde la página principal como desde la lista de favoritos se puede eliminar un favorito de la lista de favoritos.
+
 En la parte superior de la página hay un filtro que filtra la lista por géneros, mostrando solo los resultados que contengan ese género.
 
 ![Filtro](./images/Filtro.gif)
