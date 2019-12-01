@@ -20,4 +20,4 @@ En la parte superior de la página hay un filtro que filtra la lista por género
 
 # Video explicativo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ui57IxJW7ZM" frameborder="0" allowfullscreen></iframe>
+![Video Explicativo](https://youtu.be/ui57IxJW7ZM "Video explicativo")
