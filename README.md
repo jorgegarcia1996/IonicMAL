@@ -15,3 +15,7 @@ Debajo de los detalles, hay 2 botones, el primero te lleva a la página de My An
 En la parte superior de la página hay un filtro que filtra la lista por géneros, mostrando solo los resultados que contengan ese género.
 
 ![Filtro](Filtro.gif)
+
+# Video explicativo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ui57IxJW7ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
