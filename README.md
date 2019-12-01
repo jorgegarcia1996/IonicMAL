@@ -16,12 +16,8 @@ Tanto desde la página principal como desde la lista de favoritos se puede elimi
 
 En la parte superior de la página hay un filtro que filtra la lista por géneros, mostrando solo los resultados que contengan ese género.
 
-<<<<<<< HEAD
-![Filtro](Filtro.gif)
+![Filtro](./images/Filtro.gif)
 
 # Video explicativo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ui57IxJW7ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-=======
-![Filtro](./images/Filtro.gif)
->>>>>>> bdb25ace33a7832b537dce2a06e79853b7f297f9
